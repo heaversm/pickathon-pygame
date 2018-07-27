@@ -46,65 +46,73 @@ fadeTime = 500
 
 while True:
 
-  if (GPIO.input(23) == False and s1p == False):
-    s1.stop()
-    s1.play(loops=-1)
-    s1p = True
+  if (GPIO.input(23) == False):
+    if (s1p == False):
+      s1.stop()
+      s1.play(loops=-1)
+      s1p = True
   else:
     s1.fadeout(fadeTime)
 
-  if (GPIO.input(24) == False and s2p == False):
-    s2.stop()
-    s2.play(loops=-1)
-    s2p = True
+  if (GPIO.input(24) == False):
+    if (s2p == False):
+      s2.stop()
+      s2.play(loops=-1)
+      s2p = True
   else:
     s2.fadeout(fadeTime)
     s2p = False
 
-  if (GPIO.input(25) == False and s3p == False):
-    s3.stop()
-    s3.play(loops=-1)
-    s3p = True
+  if (GPIO.input(25) == False):
+    if (s3p == False):
+      s3.stop()
+      s3.play(loops=-1)
+      s3p = True
   else:
     s3.fadeout(fadeTime)
     s3p = False
 
-  if (GPIO.input(12) == False and s4p == False):
-    s4.stop()
-    s4.play(loops=-1)
-    s4p = True
+  if (GPIO.input(12) == False):
+    if (s4p == False):
+      s4.stop()
+      s4.play(loops=-1)
+      s4p = True
   else:
     s4.fadeout(fadeTime)
     s4p = False
 
-  if (GPIO.input(16) == False and s5p == False):
-    s5.stop()
-    s5.play(loops=-1)
-    s5p = True
+  if (GPIO.input(16) == False):
+    if (s5p == False):
+      s5.stop()
+      s5.play(loops=-1)
+      s5p = True
   else:
     s5.fadeout(fadeTime)
     s5p = False
 
-  if (GPIO.input(20) == False and s6p == False):
-    s6.stop()
-    s6.play(loops=-1)
-    s6p = True
+  if (GPIO.input(20) == False):
+    if (s6p == False):
+      s6.stop()
+      s6.play(loops=-1)
+      s6p = True
   else:
     s6.fadeout(fadeTime)
     s6p = False
 
-  if (GPIO.input(21) == False and s7p == False):
-    s7.stop()
-    s7.play(loops=-1)
-    s7p = True
+  if (GPIO.input(21) == False):
+    if (s7p == False):
+      s7.stop()
+      s7.play(loops=-1)
+      s7p = True
   else:
     s7.fadeout(fadeTime)
-    s8p = False
+    s7p = False
 
-  if (GPIO.input(26) == False and s8p == False):
-    s8.stop()
-    s8.play(loops=-1)
-    s8p = True
+  if (GPIO.input(26) == False):
+    if (s8p == False):
+      s8.stop()
+      s8.play(loops=-1)
+      s8p = True
   else:
     s8.fadeout(fadeTime)
     s8p = False
