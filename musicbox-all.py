@@ -42,6 +42,7 @@ s6p = False
 s7p = False
 s8p = False
 
+fadeTime = 500
 
 while True:
 
@@ -49,63 +50,63 @@ while True:
     s1.stop()
     s1.play(loops=-1)
     s1p = True
-  else
-    s1.fadeout()
+  else:
+    s1.fadeout(fadeTime)
 
   if (GPIO.input(24) == False and s2p == False):
     s2.stop()
     s2.play(loops=-1)
     s2p = True
-  else
-    s2.fadeout()
+  else:
+    s2.fadeout(fadeTime)
     s2p = False
 
   if (GPIO.input(25) == False and s3p == False):
     s3.stop()
     s3.play(loops=-1)
     s3p = True
-  else
-    s3.fadeout()
+  else:
+    s3.fadeout(fadeTime)
     s3p = False
 
   if (GPIO.input(12) == False and s4p == False):
     s4.stop()
     s4.play(loops=-1)
     s4p = True
-  else
-    s4.fadeout()
+  else:
+    s4.fadeout(fadeTime)
     s4p = False
 
   if (GPIO.input(16) == False and s5p == False):
     s5.stop()
     s5.play(loops=-1)
     s5p = True
-  else
-    s5.fadeout()
+  else:
+    s5.fadeout(fadeTime)
     s5p = False
 
   if (GPIO.input(20) == False and s6p == False):
     s6.stop()
     s6.play(loops=-1)
     s6p = True
-  else
-    s6.fadeout()
+  else:
+    s6.fadeout(fadeTime)
     s6p = False
 
   if (GPIO.input(21) == False and s7p == False):
     s7.stop()
     s7.play(loops=-1)
     s7p = True
-  else
-    s7.fadeout()
+  else:
+    s7.fadeout(fadeTime)
     s8p = False
 
   if (GPIO.input(26) == False and s8p == False):
     s8.stop()
     s8.play(loops=-1)
     s8p = True
-  else
-    s8.fadeout()
+  else:
+    s8.fadeout(fadeTime)
     s8p = False
 
   for event in pygame.event.get():
@@ -115,6 +116,6 @@ while True:
     if event.type == KEYDOWN:
       if event.key==K_ESCAPE:
         pygame.mixer.stop()
-	    pygame.quit()
-	    sys.exit()
+	pygame.quit()
+	sys.exit()
   pygame.display.update()
